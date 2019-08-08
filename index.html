@@ -22,7 +22,7 @@
       <h4>数字のみ且つ数値10以下 v-validate="'numeric|max:10'"</h4>
       <input :class="{ required: errors.has('num02') }" v-validate="'max_value:10'" type="text" name="num02">
       <br>
-      <span :class="{ errTxt: errors.has('num02') }" v-if="errors.has('num02')" v-cloak>{{ errors.first('num2') }}</span>
+      <span :class="{ errTxt: errors.has('num02') }" v-if="errors.has('num02')" v-cloak>{{ errors.first('num02') }}</span>
     </p>
     <hr>
     <p>
