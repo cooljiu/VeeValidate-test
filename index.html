@@ -10,55 +10,15 @@
 <body>
   <div id="app">
     <p>検証テスト</p>
-    <hr>
-    <p>
-      <h4>数字のみ且つ文字数制限10 v-validate="'numeric|max:10'"</h4>
-      <input :class="{ required: errors.has('num01') }" v-validate="'numeric|max:10'" type="text" name="num01">
-      <br>
-      <span :class="{ errTxt: errors.has('num01') }" v-if="errors.has('num01')" v-cloak>{{ errors.first('num01') }}</span>
-    </p>
-    <hr>
-    <p>
-      <h4>数字のみ且つ数値10以下 v-validate="'numeric|max:10'"</h4>
-      <input :class="{ required: errors.has('num02') }" v-validate="'max_value:10'" type="text" name="num02">
-      <br>
-      <span :class="{ errTxt: errors.has('num02') }" v-if="errors.has('num02')" v-cloak>{{ errors.first('num02') }}</span>
-    </p>
-    <hr>
-    <p>
-        <h4>アルファベット且つ必須項目 v-validate="'required|alpha'"</h4>
-        <input :class="{ required: errors.has('num03') }" v-validate="'required|alpha'" type="text" name="num03">
-        <br>
-        <span :class="{ errTxt: errors.has('num03') }" v-if="errors.has('num03')" v-cloak>{{ errors.first('num03') }}</span>
-      </p>
-      <hr>
-      <p>
-        <h4>英数字とハイフン、アンダースコアのみ v-validate="'alpha_dash'"</h4>
-        <input :class="{ required: errors.has('num04') }" v-validate="'alpha_dash'" type="text" name="num04">
-        <br>
-        <span :class="{ errTxt: errors.has('num04') }" v-if="errors.has('num04')" v-cloak>{{ errors.first('num04') }}</span>
-      </p>
-      <hr>
-      <p>
-        <h4>英数字のみ  v-validate="'alpha_num'"</h4>
-        <input :class="{ required: errors.has('num05') }" v-validate="'alpha_num'" type="text" name="num05">
-        <br>
-        <span :class="{ errTxt: errors.has('num05') }" v-if="errors.has('num05')" v-cloak>{{ errors.first('num05') }}</span>
-      </p>
-      <hr>
-      <p>
-        <h4>アルファベットと空白のみ  v-validate="'alpha_spaces'"</h4>
-        <input :class="{ required: errors.has('num06') }" v-validate="'alpha_spaces'" type="text" name="num06">
-        <br>
-        <span :class="{ errTxt: errors.has('num06') }" v-if="errors.has('num06')" v-cloak>{{ errors.first('num06') }}</span>
-      </p>
-      <hr>
-      <p>
-        <h4>カタカナのみ  v-validate="'regex:^([ァ-ヴ][ァ-ヴー・]*)$'"</h4>
-        <input :class="{ required: errors.has('num07') }" v-validate="'regex:^([ァ-ヴ][ァ-ヴー・]*)$'" type="text" name="num07">
-        <br>
-        <span :class="{ errTxt: errors.has('num07') }" v-if="errors.has('num07')" v-cloak>{{ errors.first('num07') }}</span>
-      </p>
+    <my-comp title="数字のみ且つ文字数制限10 v-validate='numeric|max:10'" designation="num01" condition="numeric|max:10"></my-comp>
+    <my-comp title="数字のみ且つ数値10以下 v-validate='max_value:10'" designation="num02" condition="max_value:10"></my-comp>
+    <my-comp title="アルファベット且つ必須項目 v-validate='required|alpha'" designation="num03" condition="required|alpha"></my-comp>
+    <my-comp title="英数字とハイフン、アンダースコアのみ v-validate='alpha_dash'" designation="num04" condition="alpha_dash"></my-comp>
+    <my-comp title="英数字のみ  v-validate='alpha_num'" designation="num05" condition="alpha_num"></my-comp>
+    <my-comp title="アルファベットと空白のみ  v-validate='alpha_spaces'" designation="num06" condition="alpha_spaces"></my-comp>
+    <my-comp title="カタカナのみ  v-validate='regex:^([ァ-ヴ][ァ-ヴー・]*)$'" designation="num07" condition="regex:^([ァ-ヴ][ァ-ヴー・]*)$"></my-comp>
+
+
       <hr>
       <p>
         <h4>data-vv-as  エラー表示に使われるフィールド名を変更 </h4>
