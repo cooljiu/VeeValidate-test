@@ -18,7 +18,6 @@
     <my-comp title="アルファベットと空白のみ  v-validate='alpha_spaces'" designation="num06" condition="alpha_spaces"></my-comp>
     <my-comp title="カタカナのみ  v-validate='regex:^([ァ-ヴ][ァ-ヴー・]*)$'" designation="num07" condition="regex:^([ァ-ヴ][ァ-ヴー・]*)$"></my-comp>
 
-
       <hr>
       <p>
         <h4>data-vv-as  エラー表示に使われるフィールド名を変更 </h4>
@@ -26,6 +25,7 @@
         <br>
         <span :class="{ errTxt: errors.has('vvNum01') }" v-if="errors.has('vvNum01')">{{ errors.first('vvNum01') }}</span>
       </p>
+      
       <hr>
       <p>
         <h4>data-vv-name  検証等に使われるフィールド名を変更 </h4>
@@ -33,6 +33,7 @@
         <br>
         <span :class="{ errTxt: errors.has('鈴木') }" v-if="errors.has('鈴木')">{{ errors.first('鈴木') }}</span>
       </p>
+
       <hr>
       <p>
         <h4>オリジナルメッセージに変更 </h4>
@@ -40,6 +41,7 @@
         <br>
         <span :class="{ errTxt: errors.has('vvNum03') }" v-if="errors.has('vvNum03')">アルファベットのみ使用してください！！！（オリジナルメッセージです）</span>
       </p>
+
       <hr>
       <p style="font-size:16px; margin-top:20px;">もっと多い検証項目はここに参考してください</p>
       <a href="https://baianat.github.io/vee-validate/guide/rules.html" target="_blank">https://baianat.github.io/vee-validate/guide/rules.html</a>

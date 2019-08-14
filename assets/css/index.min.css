@@ -1,6 +1,12 @@
 hr[data-v-4ecbf42a] {
   border-top: 1px solid #999;
 }
+.v-fade-enter-active[data-v-4ecbf42a], .v-fade-leave-active[data-v-4ecbf42a] {
+  transition: opacity .5s;
+}
+.v-fade-enter[data-v-4ecbf42a], .v-fade-leave-to[data-v-4ecbf42a] {
+  opacity: 0;
+}
 body {
   background-color: #eee;
   font-size: 14px;

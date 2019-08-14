@@ -255,7 +255,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var vee_validate__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! vee-validate */ "./node_modules/vee-validate/dist/vee-validate.esm.js");
 /* harmony import */ var vee_validate_dist_locale_ja__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! vee-validate/dist/locale/ja */ "./node_modules/vee-validate/dist/locale/ja.js");
 /* harmony import */ var vee_validate_dist_locale_ja__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(vee_validate_dist_locale_ja__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _comp_ValidationComp_vue__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ../../comp/ValidationComp.vue */ "../comp/ValidationComp.vue");
+/* harmony import */ var _comp_ValidationComp_vue__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ../../comp/ValidationComp.vue */ "../comp/ValidationComp.vue");
 /* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ../scss/index.scss */ "./scss/index.scss");
 /* harmony import */ var _scss_index_scss__WEBPACK_IMPORTED_MODULE_4___default = /*#__PURE__*/__webpack_require__.n(_scss_index_scss__WEBPACK_IMPORTED_MODULE_4__);
 
@@ -275,7 +275,7 @@ var app = new vue__WEBPACK_IMPORTED_MODULE_0__["default"]({
     };
   },
   components: {
-    "my-comp": _comp_ValidationComp_vue__WEBPACK_IMPORTED_MODULE_5__["default"]
+    "my-comp": _comp_ValidationComp_vue__WEBPACK_IMPORTED_MODULE_3__["default"]
   },
   methods: {}
 });
@@ -348,32 +348,38 @@ var render = function() {
   var _vm = this
   var _h = _vm.$createElement
   var _c = _vm._self._c || _h
-  return _c("div", [
-    _c("hr"),
-    _vm._v(" "),
-    _c("h4", [_vm._v(_vm._s(_vm.title))]),
-    _vm._v(" "),
-    _c("input", {
-      directives: [
-        {
-          name: "validate",
-          rawName: "v-validate",
-          value: _vm.condition,
-          expression: "condition"
-        }
-      ],
-      class: { required: _vm.errors.has(_vm.designation) },
-      attrs: { type: "text", name: _vm.designation }
-    }),
-    _vm._v(" "),
-    _c("br"),
-    _vm._v(" "),
-    _vm.errors.has(_vm.designation)
-      ? _c("span", { class: { errTxt: _vm.errors.has(_vm.designation) } }, [
-          _vm._v(_vm._s(_vm.errors.first(_vm.designation)))
-        ])
-      : _vm._e()
-  ])
+  return _c(
+    "div",
+    [
+      _c("hr"),
+      _vm._v(" "),
+      _c("h4", [_vm._v(_vm._s(_vm.title))]),
+      _vm._v(" "),
+      _c("input", {
+        directives: [
+          {
+            name: "validate",
+            rawName: "v-validate",
+            value: _vm.condition,
+            expression: "condition"
+          }
+        ],
+        class: { required: _vm.errors.has(_vm.designation) },
+        attrs: { type: "text", name: _vm.designation }
+      }),
+      _vm._v(" "),
+      _c("br"),
+      _vm._v(" "),
+      _c("transition", { attrs: { name: "v-fade" } }, [
+        _vm.errors.has(_vm.designation)
+          ? _c("span", { class: { errTxt: _vm.errors.has(_vm.designation) } }, [
+              _vm._v(_vm._s(_vm.errors.first(_vm.designation)))
+            ])
+          : _vm._e()
+      ])
+    ],
+    1
+  )
 }
 var staticRenderFns = []
 render._withStripped = true
